@@ -1,0 +1,10 @@
+<apex:page controller="pdfPageController" renderAs="pdf">
+
+  <apex:panelGrid columns="3" width="100%">
+       <apex:outputText value="{!name}"/>
+       <apex:outputText value="{!adress}"/>
+       <apex:outputText value="{!price}"/>
+       <apex:outputText value="{!child}"/>
+       <apex:outputText value="{!family}"/>
+   </apex:panelGrid>
+</apex:page>
