@@ -1,0 +1,21 @@
+public class pdfPageController {
+
+    public String name {get; set;}
+    public String adress {get; set;}
+    public Decimal price {get; set;}
+    public Decimal child {get; set;}
+    public String family {get;set;}
+  
+    public pdfPageController() {
+        House__c house = [SELECT Name, Adress__c, Priece__c,
+                          Number_Child__c, Family__c 
+                          FROM House__c
+                          WHERE id = 'a0009000003yQiRAAU'];
+      
+        name = house.Name;
+        adress = house.Adress__c;
+        price = house.Priece__c;
+        child = house.Number_Child__c;
+        family = house.Family__c;
+    } 
+}
